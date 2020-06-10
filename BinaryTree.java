@@ -1,9 +1,17 @@
-public class BinaryTree {
+public class Node {
+
     Node left, right;
     int data;
 
-    public void Node(int data) {
+    Node(int data) {
         this.data = data;
+        right = null;
+        left = null;
+    }
+
+    Node() {
+        right = null;
+        left = null;
     }
 
     public void insert(int value) {
@@ -50,8 +58,8 @@ public class BinaryTree {
         }
     }
 
-    private BinaryTree createBinaryTree() {
-        BinaryTree bt = new BinaryTree();
+    private static Node createBinaryTree() {
+        Node bt = new Node();
 
         bt.insert(50);
         bt.insert(84);
@@ -66,6 +74,9 @@ public class BinaryTree {
     }
 
     public static void main(String[] args) {
+        Node bt = createBinaryTree();
+
+        bt.printInOrder();
 
     }
 }
