@@ -1,17 +1,9 @@
-public class Node {
-
+public class JoshBinaryTree {
     Node left, right;
     int data;
 
-    Node(int data) {
+    public void Node(int data) {
         this.data = data;
-        right = null;
-        left = null;
-    }
-
-    Node() {
-        right = null;
-        left = null;
     }
 
     public void insert(int value) {
@@ -58,9 +50,8 @@ public class Node {
         }
     }
 
-    private static Node createBinaryTree() {
-        Node bt = new Node();
-
+    private static JoshBinaryTree createBinaryTree() {
+        JoshBinaryTree bt = new JoshBinaryTree();
         bt.insert(50);
         bt.insert(84);
         bt.insert(24);
@@ -69,20 +60,11 @@ public class Node {
         bt.insert(64);
         bt.insert(99);
         bt.insert(1);
-
         return bt;
     }
 
     public static void main(String[] args) {
-        Node bt = createBinaryTree();
-
+        BinaryTree bt = createBinaryTree();
         bt.printInOrder();
-
-        if (bt.contains(20)) {
-            System.out.println("Was found!");
-        } else {
-            System.out.println("Wasn't found!");
-        }
-
     }
 }
